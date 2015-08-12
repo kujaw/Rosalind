@@ -3,6 +3,7 @@ with open('rosalind_subs.txt', 'r') as f:
 
 repeat_indices = []
 n = 0
+
 while len(genome[n:]) >= len(repeat):
     if repeat not in genome[n:]:
         break
