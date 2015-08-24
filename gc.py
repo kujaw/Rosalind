@@ -11,7 +11,7 @@ cur_key = ''
 for line in raw_samples:
     if line[0] == '>':
         cur_key = line[1:].rstrip()
-        samples[cur_key] = ' '
+        samples[cur_key] = ''
     else:
         samples[cur_key] += line.rstrip()
 
@@ -23,10 +23,7 @@ for s_id, s in samples.items():
 sVal=list(samples.values())
 sKey=list(samples.keys())
 print(sKey[sVal.index(max(sVal))])
+
 print('%.6f' % max(sVal))
-'''
-(s_id, gc) = max(list(samples.items()), key = lambda item:item[1])
-print(s_id)
-print(gc, '%')
-'''
+
 print('Timer:', perf_counter() - start)
