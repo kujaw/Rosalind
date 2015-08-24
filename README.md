@@ -1,1 +1,1 @@
-# Rosalind
+Repository contains solved excercises from rosalind.info webpage.
